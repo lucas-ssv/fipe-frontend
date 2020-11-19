@@ -1,16 +1,15 @@
 import React from 'react';
+
 import Routes from './routes';
+import CreateGlobalStyle from './styles/global';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
-
-import Header from './components/Header';
-
-const App = () => (
-  <div className="App">
-    <Header />
-    <Routes />
-  </div>
-);
+function App() {
+  return (
+    <>
+        <Routes />
+        <CreateGlobalStyle />
+    </>
+  );
+}
 
 export default App;

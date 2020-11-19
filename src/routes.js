@@ -1,17 +1,24 @@
 import React from 'react';
-
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Main from './components/Section';
-import Modelo from './pages/modelo';
+import Dashboard from './pages/Dashboard';
+import Fipe from './pages/Fipe';
+import Modelo from './pages/Modelo';
+import Buscar from './pages/Buscar';
+import Anuncio from './pages/Anuncio';
 
-const Routes = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Main} />
-      <Route path="/cars/toyota" component={Modelo} />
-    </Switch>
-  </BrowserRouter>
-);
+const routes = () => {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/" component={Dashboard} />
+                <Route exact path="/fipe" component={Fipe} />
+                <Route path="/fipe/modelo" component={Modelo} />
+                <Route exact path="/buscar" component={Buscar} />
+                <Route path="/buscar/anuncios" component={Anuncio} />
+            </Switch>
+        </BrowserRouter>
+    );
+};
 
-export default Routes;
+export default routes;

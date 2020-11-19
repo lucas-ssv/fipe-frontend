@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import './styles.css';
+const Header = styled.div`
+    margin-top: 100px;
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    text-align: center;
 
-class Header extends Component {
-    render() {
-        return (
-            <header className="main-header">Fipe <strong>Toyota</strong></header>
-        );
+    strong {
+        color: #F3123C;
     }
-}
+`;
 
 export default Header;
